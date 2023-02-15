@@ -4,6 +4,7 @@ import Footer from "./Components/Footer";
 import Checkboxes from "./Components/Checboxes";
 import Barchart from "./Components/Barchart";
 import Table from "./Components/Table";
+import StudentData from "./StudentData/StudentData";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Checkboxes/>
         <Barchart/>
         <Table/>
+        <StudentData/>
       <Footer/>
     </div>
   );
