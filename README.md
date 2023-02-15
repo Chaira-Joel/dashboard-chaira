@@ -1,4 +1,4 @@
-Final assignment: React Student Dashboard
+### Final assignment: React Student Dashboard
 For this final assignment, you will make a "real-life" project. This will be a project of which the end result will actually be used by Winc Academy: a Student Dashboard! Goal: to make it easy for Winc teachers to see how the students evaluate the assignments
 
 For this assignment I divided the assignment up in an epic and user stories to make it more manageable:
