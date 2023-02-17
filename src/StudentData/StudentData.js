@@ -17,7 +17,9 @@ function StudentData(){
     }, [])
 
     return(
-        <div>Data</div>
+        <div>
+
+        </div>
     )
 }
 
