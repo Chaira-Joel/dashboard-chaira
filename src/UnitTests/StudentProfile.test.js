@@ -12,7 +12,10 @@ const {getByText} = render(<Students items={items}/>);
 
 // eslint-disable-next-line testing-library/prefer-screen-queries
 expect(getByText("Marieke")).toBeInTheDocument();
+// eslint-disable-next-line testing-library/prefer-screen-queries
 expect(getByText("Peter")).toBeInTheDocument();
+// eslint-disable-next-line testing-library/prefer-screen-queries
 expect(getByText("Winston")).toBeInTheDocument();
+// eslint-disable-next-line testing-library/prefer-screen-queries,testing-library/no-node-access
 expect(getByText("Marieke").parentElement.childElementCount).toBe(3);
 });

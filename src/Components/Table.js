@@ -19,14 +19,13 @@ function Table({items}){
             <table className="table">
                 <thead className="table-head">
 
-                <th className="table-head-row">Name</th>
-                <button>Sort</button>
-
-                <th className="table-head-row">Assignment</th>
-                <button>Sort</button>
-
-                <th className="table-head-row">Difficulty</th>
-                <button>Sort</button>
+                <th className="table-head-row">Name
+                    <button>Sort</button>
+                </th>
+                <th className="table-head-row">Assignment
+                    <button>Sort</button></th>
+                <th className="table-head-row">Difficulty
+                    <button>Sort</button></th>
                 </thead>
 
                 <tbody className="table-body">{ListItems}</tbody>
