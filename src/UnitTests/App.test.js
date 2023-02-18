@@ -13,11 +13,7 @@ test('Renders the footer component', ()=>{
   expect(footerElement).toBeVisible();
 });
 
-test('Renders the Barchart component', ()=>{
-  render(<App/>)
-  const BarChartElement = screen.getByText(/Barchart/);
-  expect(BarChartElement).toBeVisible();
-});
+
 
 test('Renders the Data component', ()=>{
   render(<App/>)

@@ -1,5 +1,8 @@
 import React from "react"
 import Student from "./Students";
+import Barchart from "./Barchart";
+import Checkboxes from "./Checboxes";
+import Table from "./Table";
 
     class HomePage extends React.Component{
     constructor(props) {
@@ -18,13 +21,12 @@ import Student from "./Students";
         return (
             <div>
                 <h1> This is the homepage </h1>
-                <p> I will consist of: </p>
-                <p> 1. bar chart with data of all students showing fun versus difficultulty rating of the assignments </p>
-                <p> this bar chart has checkboxes to filter on students</p>
-
                 <Student
                     items={this.state.items}
                     />
+                <Checkboxes/>
+                <Barchart/>
+                <Table/>
 
             </div>
         );

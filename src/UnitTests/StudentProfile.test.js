@@ -10,6 +10,7 @@ const items=[
 ];
 const {getByText} = render(<Students items={items}/>);
 
+// eslint-disable-next-line testing-library/prefer-screen-queries
 expect(getByText("Marieke")).toBeInTheDocument();
 expect(getByText("Peter")).toBeInTheDocument();
 expect(getByText("Winston")).toBeInTheDocument();
