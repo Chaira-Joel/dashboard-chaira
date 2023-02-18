@@ -1,7 +1,7 @@
 import React from "react"
 import Student from "./Students";
 import Barchart from "./Barchart";
-import Checkboxes from "./Checboxes";
+import Checkboxes from "./Checkboxes";
 import Table from "./Table";
 
     class HomePage extends React.Component{
@@ -26,7 +26,8 @@ import Table from "./Table";
                     />
                 <Checkboxes/>
                 <Barchart/>
-                <Table/>
+                <Table
+                items={this.state.items}/>
 
             </div>
         );

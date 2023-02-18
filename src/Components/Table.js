@@ -1,6 +1,19 @@
 import React from "react"
+import TableItem from "./TableItem";
 
-function Table(){
+function Table({items}){
+
+        const ListItems = items ? items.map (item => (
+            <TableItem
+                key = {item.id}
+                id = {item.id}
+                name = {item.name}
+                assignment = {item.assignment}
+                difficulty = {item.difficulty}
+                fun = {item.fun}
+            />
+        )) : null
+
     return(
         <div className="table-container">
             <table className="table">
@@ -16,7 +29,7 @@ function Table(){
                 <button>Sort</button>
                 </thead>
 
-                <tbody className="table-body"></tbody>
+                <tbody className="table-body">{ListItems}</tbody>
 
             </table>
         </div>

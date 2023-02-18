@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import Checkboxes from '../Components/Checboxes';
+import Checkboxes from '../Components/Checkboxes';
 
 test('Renders the Difficult Checkbox', ()=>{
     render (<Checkboxes/>);
