@@ -2,7 +2,7 @@ import Papa from 'papaparse'
 import {useEffect} from "react"
 import MockData from './StudentData.csv'
 
-function StudentData(){
+function Data(){
     useEffect(()=>{
         const fetchParseData = async()=>{
             Papa.parse(MockData, {
@@ -10,6 +10,8 @@ function StudentData(){
                 delimiter:",",
                 complete:((result)=>{
                     console.log(result.data)
+                    result = result.data
+                    return result
                 })
             })
         }
@@ -18,9 +20,10 @@ function StudentData(){
 
     return(
         <div>
-
+            <h1>Data</h1>
         </div>
     )
 }
 
-export default StudentData
+export default Data
+

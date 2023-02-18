@@ -4,8 +4,9 @@ import Footer from "./Components/Footer";
 import Checkboxes from "./Components/Checboxes";
 import Barchart from "./Components/Barchart";
 import Table from "./Components/Table";
-import StudentData from "./StudentData/StudentData";
+import Data from "./StudentData/Data";
 import HomePage from './Components/Home'
+
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
         <HomePage/>
         <Checkboxes/>
         <Barchart/>
+
         <Table/>
-        <StudentData/>
+        <Data/>
       <Footer/>
     </div>
   );

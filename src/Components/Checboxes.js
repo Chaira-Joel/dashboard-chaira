@@ -8,6 +8,7 @@ function Checkboxes(){
                 type="checkbox"
                 id="fun"
                 value="fun"
+                data-testid="fun"
                 />
 
             <label>Difficult</label>
@@ -15,6 +16,7 @@ function Checkboxes(){
                 type="checkbox"
                 id="difficult"
                 value="difficult"
+                data-testid="difficult"
             />
         </div>
     )
