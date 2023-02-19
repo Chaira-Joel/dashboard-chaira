@@ -1,5 +1,6 @@
-import React from 'react';
-import { VictoryBar, VictoryChart, VictoryAxis, VictoryTheme } from 'victory';
+import React from "react"
+import {VictoryBar, VictoryChart, VictoryAxis, VictoryTheme} from "victory";
+
 
 const data = [
     {quarter: 1, earnings: 13000},
@@ -8,32 +9,29 @@ const data = [
     {quarter: 4, earnings: 19000}
 ];
 
-class Barchart extends React.Component {
-    render() {
-        return (
-            <div>
-                <h1>Barchart</h1>
-                <VictoryChart
-                    theme={VictoryTheme.material}
-                    domainPadding={10}
+function Barchart(){
+    return(
 
-                >
-                    <VictoryAxis
-                        tickValues={["Quarter 1", "Quarter 2", "Quarter 3", "Quarter 4"]}
-                    />
-                    <VictoryAxis
-                        dependentAxis
-                        tickFormat={(x) => (`$${x / 1000}k`)}
-                    />
-                    <VictoryBar
-                        data={data}
-                        x={"quarter"}
-                        y={"earnings"}
-                    />
-                </VictoryChart>
-            </div>
-        );
-    }
+<VictoryChart
+domainPadding={20}
+theme={VictoryTheme.material}>
+    <VictoryAxis
+        tickValues={[1,2,3,4]}
+        tickFormat={["Quarter 1", "Quarter 2", "Quarter 3", "Quarter 4"]}
+        />
+
+    <VictoryAxis
+        dependentAxis
+        tickFormat={(x)=>(`$${x /1000}k`)}
+        />
+            <VictoryBar
+            data={data}
+            x={"quarter"}
+            y={"earnings"}/>
+</VictoryChart>
+
+    )
 }
-
 export default Barchart
+
+

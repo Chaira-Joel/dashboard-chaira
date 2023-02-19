@@ -10,9 +10,9 @@ import Table from "./Table";
         this.state = {
             items: [
 
-                {id: 1, name:"piet", assignment: "a45", difficulty:"1", fun: "5"},
-                {id: 2, name:"klaas", assignment: "8hb", difficulty:"5", fun: "4"},
-                {id: 3, name:"petra", assignment: "2b", difficulty:"4", fun: "2"},
+                {id: 1, name:"piet", assignment: "a45", difficulty:1, fun: 5},
+                {id: 2, name:"klaas", assignment: "8hb", difficulty:5, fun: 4},
+                {id: 3, name:"petra", assignment: "2b", difficulty:4, fun: 2},
             ]
         };
     }
