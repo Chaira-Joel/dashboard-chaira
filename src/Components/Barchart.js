@@ -1,5 +1,5 @@
 import React from "react"
-import {VictoryBar, VictoryChart, VictoryAxis, VictoryTheme} from "victory";
+import {VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryGroup} from "victory";
 
 
 const data = [
@@ -13,9 +13,10 @@ const data = [
 function Barchart(){
     return(
 
-<VictoryChart
+<VictoryChart width={400} height={300}
 domainPadding={20}
 theme={VictoryTheme.material}>
+
     <VictoryAxis
         tickValues={[1,2,3,4,5]}
         tickFormat={data.assignment}
@@ -25,10 +26,26 @@ theme={VictoryTheme.material}>
         dependentAxis
         tickFormat={(x)=>(`${x /1}`)}
         />
+
+    <VictoryGroup offset={20} colorScale={"qualitative"}>
             <VictoryBar
+                barWidth={10}
+                style={{ data: { fill: "red" } }}
             data={data}
             x={"assignment"}
-            y={"difficulty"}/>
+            y={"difficulty"}
+       />
+
+    <VictoryBar
+        barWidth={10}
+        style={{ data: { fill: "blue" } }}
+        data={data}
+        x={"assignment"}
+        y={"fun"}
+    />
+    </VictoryGroup>
+
+
 </VictoryChart>
 
     )
