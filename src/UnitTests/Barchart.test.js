@@ -9,3 +9,4 @@ test('Renders a Victory BarChart Component', ()=>{
     expect(barchartComponent).toBeInTheDocument();
 
 });
+
