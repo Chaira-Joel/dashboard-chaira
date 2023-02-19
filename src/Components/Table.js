@@ -1,7 +1,7 @@
 import React from "react"
 import TableItem from "./TableItem";
 
-function Table({items}){
+function Table({items,sortAZ,sortRating}){
 
         const ListItems = items ? items.map (item => (
             <TableItem
@@ -20,12 +20,13 @@ function Table({items}){
                 <thead className="table-head">
 
                 <th className="table-head-row">Name
-                    <button>Sort</button>
+                    <button onClick={ ()=> {sortAZ('name')}}>Sort by name</button>
                 </th>
-                <th className="table-head-row">Assignment
-                    <button>Sort</button></th>
-                <th className="table-head-row">Difficulty
-                    <button>Sort</button></th>
+                <th className="table-head-row">Sort by assignment
+                    <button onClick={()=>{sortAZ('assignment')}}>Sort</button></th>
+
+                <th className="table-head-row">Sort by difficulty
+                    <button onClick={()=>{sortRating('difficulty')}}>Sort</button></th>
                 </thead>
 
                 <tbody className="table-body">{ListItems}</tbody>

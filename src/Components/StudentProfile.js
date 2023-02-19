@@ -1,8 +1,9 @@
 import React from "react"
 
-function StudentProfile(item){
+function StudentProfile({name,assignment,difficulty,fun,id}){
     return(
-        <div>{item.name}</div>
+        <div>
+            {name || ""}</div>
     )
 }
 

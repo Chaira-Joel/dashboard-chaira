@@ -1,5 +1,8 @@
 import React from "react"
 import StudentProfile from "./StudentProfile";
+import Barchart from "./Barchart";
+import Table from "./Table";
+
 
 function Students({items}) {
     const ListStudents = items ? items.map(item => (
@@ -15,6 +18,7 @@ function Students({items}) {
 
     return (
         <div>
+            <h1>Click on the name</h1>
             <a href="">{ListStudents}</a>
         </div>
 

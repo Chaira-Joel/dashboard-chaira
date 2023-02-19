@@ -10,8 +10,6 @@ function Data(){
                 delimiter:",",
                 complete:((result)=>{
                     console.log(result.data)
-                    result = result.data
-                    return result
                 })
             })
         }
