@@ -15,8 +15,8 @@ test('Renders the footer component', ()=>{
 
 
 
-test('Renders the Data component', ()=>{
-  render(<App/>)
-  const DataComponent = screen.getByText(/Data/);
-  expect(DataComponent).toBeVisible();
-});
+// test('Renders the Data component', ()=>{
+//   render(<App/>)
+//   const DataComponent = screen.getByText(/Data/);
+//   expect(DataComponent).toBeVisible();
+// });

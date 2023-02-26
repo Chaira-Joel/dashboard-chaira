@@ -1,20 +1,19 @@
 import React from "react"
 import {VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryGroup} from "victory";
 
-
 function Barchart({items}){
     return(
         <div data-testid="barchart">
 
 <VictoryChart
-    width={400}
+    width={550}
     height={300}
     domainPadding={20}
     theme={VictoryTheme.material}>
 
     <VictoryAxis
         tickValues={[1,2,3,4,5,6,7]}
-        tickFormat={items.assignment}
+        tickFormat={items.name}
         />
 
     <VictoryAxis
@@ -27,7 +26,7 @@ function Barchart({items}){
         colorScale={"qualitative"}>
 
             <VictoryBar
-                barWidth={10}
+                barWidth={1}
                 style={{ data: { fill: "red" } }}
                 data={items}
                 x={"assignment"}
@@ -35,7 +34,7 @@ function Barchart({items}){
        />
 
             <VictoryBar
-             barWidth={10}
+             barWidth={1}
              style={{ data: { fill: "blue" } }}
                data={items}
              x={"assignment"}

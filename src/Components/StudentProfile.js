@@ -1,6 +1,6 @@
 import React from "react"
 
-function StudentProfile({name,assignment,difficulty,fun,id}){
+function StudentProfile({name}){
     return(
         <div>
             {name || ""}</div>

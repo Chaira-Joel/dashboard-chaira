@@ -1,58 +1,66 @@
 import React from "react"
-import Student from "./Students";
+import {useState} from "react";
 import Barchart from "./Barchart";
 import Checkboxes from "./Checkboxes";
 import Table from "./Table";
-import Data from '../StudentData/Data'
+import studentDataArray from "../StudentData/Data";
+import Students from "./Students";
 
-    class HomePage extends React.Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            items: [
 
-                {id: 1, name:"piet", assignment: "a45", difficulty:1, fun: 5},
-                {id: 2, name:"klaas", assignment: "8hb", difficulty:5, fun: 4},
-                {id: 3, name:"petra", assignment: "2b", difficulty:4, fun: 1},
-            ]
+function HomePage(){
+    const transformedStudentData = studentDataArray.map((item, index)=>{
+        return {
+            id: index+1,
+            name: item.name,
+            assignment: item.assignment,
+            difficulty: parseInt(item.difficulty),
+            fun: parseInt(item.fun)
         };
-        this.sortAZ = this.sortAZ.bind(this)
-        this.sortRating = this.sortRating.bind(this)
+    })
+    const [items, setItems] = useState(transformedStudentData);
+
+    const sortAZ= (key) => {
+        const newStudentList = [...items]
+        newStudentList.sort((a,b)=>(a[key].toLowerCase() < b[key].toLowerCase()) ? -1 :1)
+        setItems(newStudentList)
     }
 
-        sortAZ(key){
-            const newStudentList = [...this.state.items]
-            newStudentList.sort((a,b)=>(a[key].toLowerCase() < b[key].toLowerCase()) ? -1 :1)
-            this.setState({items:newStudentList})
+    const sortRating = (key) =>  {
+        const newStudentList = [...items]
+        newStudentList.sort((a, b) => (a[key] - b[key]))
+        setItems(newStudentList)
+    }
+
+    const uniqueStudents = transformedStudentData.reduce((result, current)=>{
+        if(result.some(item=> item.name === current.name)){
+            return result;
         }
+        result.push(current);
+        return result;
+    }, []);
 
-        sortRating(key) {
-            const newStudentList = [...this.state.items]
-            newStudentList.sort((a, b) => (a[key] - b[key]))
-            this.setState({songs: newStudentList})
-        }
-    render() {
-        return (
-            <div>
-                <h1> This is the homepage </h1>
-                <Student
-                    items={this.state.items}
-                    />
-                <Checkboxes/>
 
-                <Barchart
-                items={this.state.items}/>
+    return(
+        <div>
+            <h1> This is the homepage </h1>
+            <Students
+            items={uniqueStudents}/>
 
-                <Data/>
+            <Checkboxes/>
 
-                <Table
-                items={this.state.items}
-                sortAZ={this.sortAZ}
-                sorRating={this.sortRating}/>
+            <Barchart
+                items={items}/>
 
-            </div>
-        );
 
-    }}
+            <Table
+                items={items}
+                sortAZ={sortAZ}
+                sorRating={sortRating}/>
 
-    export default HomePage;
+        </div>
+
+
+    )
+}
+
+export default HomePage
