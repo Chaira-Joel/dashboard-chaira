@@ -39,23 +39,30 @@ function HomePage(){
         return result;
     }, []);
 
+    const uniqueAssignments = transformedStudentData.reduce((result, current)=>{
+        if(result.some(item=> item.assignment === current.assignment)){
+            return result;
+        }
+        result.push(current);
+        return result;
+    }, []);
+
 
     return(
         <div>
             <h1> This is the homepage </h1>
             <Students
-            items={uniqueStudents}/>
+                items={uniqueStudents}/>
 
             <Checkboxes/>
 
             <Barchart
-                items={items}/>
+                items={uniqueAssignments}/>
 
 
-            <Table
-                items={items}
-                sortAZ={sortAZ}
-                sorRating={sortRating}/>
+            <Table items={items}
+                   sortAZ={sortAZ}
+                    sortRating={sortRating}/>
 
         </div>
 

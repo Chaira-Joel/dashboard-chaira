@@ -22,11 +22,15 @@ function Table({items,sortAZ,sortRating}){
                 <th className="table-head-row">Name
                     <button onClick={ ()=> {sortAZ('name')}}>Sort by name</button>
                 </th>
+
                 <th className="table-head-row">Sort by assignment
-                    <button onClick={()=>{sortAZ('assignment')}}>Sort</button></th>
+                    <button onClick={()=>{sortAZ('assignment')}}>Sort</button>
+                </th>
 
                 <th className="table-head-row">Sort by difficulty
-                    <button onClick={()=>{sortRating('difficulty')}}>Sort</button></th>
+                    <button onClick={()=>{sortRating('difficulty')}}>Sort</button>
+                </th>
+
                 </thead>
 
                 <tbody className="table-body">{ListItems}</tbody>
