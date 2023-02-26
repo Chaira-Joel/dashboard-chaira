@@ -3,7 +3,7 @@ import React from "react"
 function Checkboxes({items}){
     return (
         <div className="checkboxes">
-            <label>Fun
+            <label>Fun (gold)
             <input
                 type="checkbox"
                 id="fun"
@@ -12,12 +12,13 @@ function Checkboxes({items}){
                 />
             </label>
 
-            <label>Difficult
+            <label>Difficult (red)
             <input
                 type="checkbox"
                 id="difficult"
                 value="difficult"
                 data-testid="difficult"
+
             />
             </label>
         </div>

@@ -2,6 +2,16 @@ import React from "react"
 import {VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryGroup} from "victory";
 
 function Barchart({items}){
+
+    const dataDifficulty = items.map ((item) => ({
+        assignment: item.assignment,
+        difficulty: item.difficulty,
+    }))
+    const dataFun = items.map ((item) => ({
+        assignment: item.assignment,
+        fun: item.fun
+    }))
+
     return(
         <div data-testid="barchart">
 
@@ -16,10 +26,10 @@ function Barchart({items}){
         tickFormat={items.assignment}
         style={{
             tickLabels:{
-                fontSize:2.5,
+                fontSize:2,
                 angle:-90,
                 verticalAnchor: 'middle',
-                padding:15
+                padding:20
             }}}
     />
 
@@ -28,7 +38,7 @@ function Barchart({items}){
         tickFormat={(x)=>(`${x /1}`)}
         style={{
             tickLabels:{
-                fontSize:2.5
+                fontSize:4
             }}
         }/>
 
@@ -37,16 +47,16 @@ function Barchart({items}){
         colorScale={"qualitative"}>
             <VictoryBar
                 barWidth={2}
-                style={{ data: { fill: "red" } }}
-                data={items}
+                style={{ data: { fill: "tomato" } }}
+                data={dataDifficulty}
                 x={"assignment"}
                 y={"difficulty"}
        />
 
             <VictoryBar
              barWidth={2}
-             style={{ data: { fill: "blue" } }}
-               data={items}
+             style={{ data: { fill: "gold" } }}
+               data={dataFun}
              x={"assignment"}
              y={"fun"}
     />

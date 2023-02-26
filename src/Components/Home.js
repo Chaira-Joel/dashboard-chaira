@@ -54,7 +54,8 @@ function HomePage(){
             <Students
                 items={uniqueStudents}/>
 
-            <Checkboxes/>
+            <Checkboxes
+            />
 
             <Barchart
                 items={uniqueAssignments}/>
