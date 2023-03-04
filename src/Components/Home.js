@@ -4,6 +4,8 @@ import Barchart from "./Barchart";
 import Table from "./Table";
 import studentDataArray from "../StudentData/Data";
 import Students from "./Students";
+import {Routes, Route} from "react-router-dom";
+import StudentProfile from "./StudentProfile";
 
 
 function HomePage(){
@@ -60,6 +62,13 @@ function HomePage(){
             <Table items={items}
                    sortAZ={sortAZ}
                     sortRating={sortRating}/>
+
+            <Routes>
+                <Route
+                    path="/students/:id"
+                    element={<StudentProfile items={transformedStudentData} />}
+                />
+            </Routes>
 
         </div>
 
