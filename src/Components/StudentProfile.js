@@ -1,9 +1,15 @@
 import React from "react"
+import Barchart from "./Barchart";
 
 function StudentProfile({name}){
     return(
         <div>
-            {name || ""}</div>
+            {name || ""}
+            {/*<Barchart*/}
+            {/*    items={}/>*/}
+
+
+        </div>
     )
 }
 
