@@ -1,7 +1,11 @@
 import React from "react"
+import {useState} from "react";
 import {VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryGroup} from "victory";
 
 function Barchart({items}){
+
+    const [showFun, setShowFun] = useState(true); //state variable for fun filter
+    const [showDifficulty, setShowDifficulty] = useState(true);// state variable for difficulty filter
 
     const dataDifficulty = items.map ((item) => ({
         assignment: item.assignment,
@@ -14,7 +18,21 @@ function Barchart({items}){
 
     return(
         <div data-testid="barchart">
-
+            <label>
+                <input
+                    type="checkbox"
+                    checked={showFun}
+                    onChange={(e)=> setShowFun(e.target.checked)}
+                    />
+                Show fun ratings
+            </label>
+                <label>
+                    <input type="checkbox"
+                           checked={showDifficulty}
+                           onChange={(e)=> setShowDifficulty(e.target.checked)}
+                           />
+                    Show difficulty ratings
+                </label>
 <VictoryChart
     width={500}
     height={300}
@@ -45,6 +63,8 @@ function Barchart({items}){
     <VictoryGroup
         offset={10}
         colorScale={"qualitative"}>
+
+        {showDifficulty &&
             <VictoryBar
                 barWidth={2}
                 style={{ data: { fill: "tomato" } }}
@@ -52,6 +72,8 @@ function Barchart({items}){
                 x={"assignment"}
                 y={"difficulty"}
        />
+        }
+        {showFun &&
 
             <VictoryBar
              barWidth={2}
@@ -60,6 +82,7 @@ function Barchart({items}){
              x={"assignment"}
              y={"fun"}
     />
+        }
     </VictoryGroup>
 </VictoryChart>
         </div>

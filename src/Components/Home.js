@@ -1,7 +1,6 @@
 import React from "react"
 import {useState} from "react";
 import Barchart from "./Barchart";
-import Checkboxes from "./Checkboxes";
 import Table from "./Table";
 import studentDataArray from "../StudentData/Data";
 import Students from "./Students";
@@ -53,9 +52,6 @@ function HomePage(){
             <h1> This is the homepage </h1>
             <Students
                 items={uniqueStudents}/>
-
-            <Checkboxes
-            />
 
             <Barchart
                 items={uniqueAssignments}/>
