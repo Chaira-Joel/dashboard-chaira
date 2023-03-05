@@ -2,7 +2,7 @@ import { render, screen } from '@testing-library/react';
 import App from '../App';
 
 test('Renders the header component', () => {
-  render(<App />);
+  render(<App/>);
   const headerElement = screen.getByTestId("header");
   expect(headerElement).toBeVisible();
 });
