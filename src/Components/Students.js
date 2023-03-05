@@ -1,28 +1,23 @@
-import React from "react"
-import {Link} from "react-router-dom";
-import StudentProfile from "./StudentProfile";
+import React from "react";
+import { Link } from "react-router-dom";
 
+//this component renders a link for every student. the result would be localhost/studentname
+function Students({ items }) {
+    const ListStudents = items
+        ? items.map((item) => (
+            <div key={item.id}>
+                <Link to={`/${item.name}`}>
+                    <h2>{item.name}</h2>
+                </Link>
 
-function Students({items}) {
-    const ListStudents = items ? items.map(item => (
-
-        <Link to={`/students/${item.id}`} key={item.id}>
-            {item.name}
-
-        <StudentProfile
-            key= {item.id}
-            id = {item.id}
-
-        />
-            </Link>
-    )) : null;
+            </div>
+        ))
+        : null;
 
     return (
         <div>
-            <h1>Click on the name</h1>
             {ListStudents}
         </div>
-
     );
 }
 

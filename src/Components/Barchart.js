@@ -37,24 +37,33 @@ function Barchart({items}){
     width={500}
     height={300}
     domainPadding={{ x: [20, 20], y: [0, 10] }}
-    theme={VictoryTheme.material}>
+    theme={VictoryTheme.material}
+    width={800}
+    height={200}>
 
     <VictoryAxis
+        label="assignment"
         tickValues={[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54]}
         tickFormat={items.assignment}
         style={{
+            axisLabel: { padding: 30 },
+            Label:{fontSize: 6},
             tickLabels:{
                 fontSize:2,
                 angle:-90,
                 verticalAnchor: 'middle',
-                padding:20
+                fontsize:7,
+                padding:15
             }}}
     />
 
     <VictoryAxis
+        label="grading"
         dependentAxis
-        tickFormat={(x)=>(`${x /1}`)}
+        tickFormat={x => `${x}`}
         style={{
+            axisLabel: { padding:25 },
+            Label:{fontSize: 6},
             tickLabels:{
                 fontSize:4
             }}
@@ -71,6 +80,11 @@ function Barchart({items}){
                 data={dataDifficulty}
                 x={"assignment"}
                 y={"difficulty"}
+                animate={{
+                    duration:2000,
+                    onLoad: {duration:1000},
+                }}
+
        />
         }
         {showFun &&
@@ -81,6 +95,10 @@ function Barchart({items}){
                data={dataFun}
              x={"assignment"}
              y={"fun"}
+             animate={{
+                 duration:1500,
+                 onLoad: {duration:500},
+             }}
     />
         }
     </VictoryGroup>

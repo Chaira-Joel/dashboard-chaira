@@ -1,13 +1,29 @@
-import React from "react"
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
+import studentDataArray from "../StudentData/Data";
 
+function StudentProfile() {
+    const { name } = useParams();
+    const [studentData, setStudentData] = useState(null);
 
-function StudentProfile ({name, assignment, difficulty, fun, id}) {
+    useEffect(() => {
+        const student = studentDataArray.find(
+            (item) => item.name.toLowerCase() === name.toLowerCase()
+        );
+        if (student) {
+            setStudentData(student);
+        }
+    }, [name]);
 
-    return(
+    if (!studentData) {
+        return <div>Loading...</div>;
+    }
+
+    return (
         <div>
-            {name || ""}
+            <h1>{studentData.name}</h1>
         </div>
-    )
+    );
 }
 
-export default StudentProfile
+export default StudentProfile;

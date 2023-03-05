@@ -2,22 +2,22 @@ import React from "react"
 import {useState} from "react";
 import Barchart from "./Barchart";
 import Table from "./Table";
-import studentDataArray from "../StudentData/Data";
 import Students from "./Students";
-import {Routes, Route} from "react-router-dom";
-import StudentProfile from "./StudentProfile";
+import studentDataArray from "../StudentData/Data";
 
+
+const transformedStudentData = studentDataArray.map((item, index)=>{
+    return {
+        id: index+1,
+        name: item.name,
+        assignment: item.assignment,
+        difficulty: parseInt(item.difficulty),
+        fun: parseInt(item.fun)
+    };
+})
 
 function HomePage(){
-    const transformedStudentData = studentDataArray.map((item, index)=>{
-        return {
-            id: index+1,
-            name: item.name,
-            assignment: item.assignment,
-            difficulty: parseInt(item.difficulty),
-            fun: parseInt(item.fun)
-        };
-    })
+
     const [items, setItems] = useState(transformedStudentData);
 
     const sortAZ= (key) => {
@@ -52,8 +52,8 @@ function HomePage(){
     return(
         <div>
             <h1> This is the homepage </h1>
-            <Students
-                items={uniqueStudents}/>
+
+            <Students items={uniqueStudents}/>
 
             <Barchart
                 items={uniqueAssignments}/>
@@ -62,13 +62,6 @@ function HomePage(){
             <Table items={items}
                    sortAZ={sortAZ}
                     sortRating={sortRating}/>
-
-            {/*<Routes>*/}
-            {/*    <Route*/}
-            {/*        path="/students/:id"*/}
-            {/*        element={<StudentProfile items={transformedStudentData} />}*/}
-            {/*    />*/}
-            {/*</Routes>*/}
 
         </div>
 

@@ -1,24 +1,24 @@
 import './App.css';
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+
 import Home from './Components/Home'
 import {Routes, Route} from "react-router-dom";
-import Students from "./Components/Students";
 import StudentProfile from "./Components/StudentProfile";
-import studentDataArray from "./StudentData/Data";
+import NavBar from "./Components/NavBar";
+import About   from "./Components/About"
+
+
 
 
 function App() {
   return (
     <div className="App">
+        <NavBar/>
+        <Routes>
+            <Route path="/home" element={<Home/>}/>
+            <Route path="/about" element={<About/>}/>
+            <Route path="/:name" element={<StudentProfile/> }/>
+        </Routes>
 
-{/*<Routes>*/}
-{/*    <Route path="/" element={<Students />}/>*/}
-{/*    <Route path="/students/:id" element={<StudentProfile />} />*/}
-{/*</Routes>*/}
-      <Header/>
-        <Home/>
-      <Footer/>
 
     </div>
   );
