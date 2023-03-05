@@ -5,7 +5,7 @@ function About(){
         <div>
             <main className="about" data-testid="about">
                 <h1>About</h1>
-                <p>Hello! My name is Chaïra Joel and I am currently learning front end-development via Winc-Acacdemy</p>
+                <p>Hello my name is Chaira Joel and this is my final assignment for Winc Academy</p>
             </main>
         </div>
     )
