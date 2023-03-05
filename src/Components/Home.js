@@ -49,7 +49,7 @@ function HomePage(){
 
 
     return(
-        <div className="main-homepage">
+        <div className="main-homepage" data-testid="main-homepage" >
             <h1> This is the homepage </h1>
             <Students items={uniqueStudents}/>
             <Barchart

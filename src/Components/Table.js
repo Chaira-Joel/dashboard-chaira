@@ -15,9 +15,9 @@ function Table({items,sortAZ,sortRating}){
         )) : null
 
     return(
-        <div className="table-container">
-            <table className="table">
-                <thead className="table-head">
+        <div className="table-container" data-testid="table-container" >
+            <table className="table" data-testid="table" >
+                <thead className="table-head" data-testid="table-head" >
                 <th className="table-head-row">Name
                     <button onClick={ ()=> {sortAZ('name')}}>Sort by name</button>
                 </th>

@@ -17,7 +17,7 @@ function Barchart({items}){
     }));
 
     return(
-        <div className="barchart">
+        <div className="barchart" data-testid="barchart">
             <label>
                 <input
                     type="checkbox"

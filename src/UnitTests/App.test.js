@@ -3,13 +3,13 @@ import App from '../App';
 
 test('Renders the header component', () => {
   render(<App />);
-  const headerElement = screen.getByText(/WINC academy Student Dashboard/i);
+  const headerElement = screen.getByTestId("header");
   expect(headerElement).toBeVisible();
 });
 
 test('Renders the footer component', ()=>{
   render(<App/>)
-  const footerElement = screen.getByText(/Footer/);
+  const footerElement = screen.getByTestId("footer");
   expect(footerElement).toBeVisible();
 });
 

@@ -22,7 +22,7 @@ function StudentProfile() {
     }
     const assignments = studentDataArray.filter(item => item.name.toLowerCase() === name.toLowerCase());
     return (
-        <div className ="student-profile">
+        <div className ="student-profile" data-testid="student-profile" >
             <h4> This is the page of {studentData.name}</h4>
             <p>{studentData.name} gave the following rating</p>
             <Barchart items={assignments}/>
