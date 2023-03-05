@@ -18,23 +18,17 @@ function Table({items,sortAZ,sortRating}){
         <div className="table-container">
             <table className="table">
                 <thead className="table-head">
-
                 <th className="table-head-row">Name
                     <button onClick={ ()=> {sortAZ('name')}}>Sort by name</button>
                 </th>
-
                 <th className="table-head-row">Sort by assignment
                     <button onClick={()=>{sortAZ('assignment')}}>Sort</button>
                 </th>
-
                 <th className="table-head-row">Sort by difficulty
                     <button onClick={()=>{sortRating('difficulty')}}>Sort</button>
                 </th>
-
                 </thead>
-
                 <tbody className="table-body">{ListItems}</tbody>
-
             </table>
         </div>
     )

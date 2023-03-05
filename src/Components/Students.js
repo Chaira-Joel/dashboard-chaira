@@ -5,13 +5,10 @@ import { Link } from "react-router-dom";
 function Students({ items }) {
     const ListStudents = items
         ? items.map((item) => (
-            <div className="studentlinks" key={item.id}>
-
+            <div className="student-links" key={item.id}>
                 <Link to={`/${item.name}`}>
                     <h5>{item.name}</h5>
                 </Link>
-
-
             </div>
         ))
         : null;

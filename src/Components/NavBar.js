@@ -1,7 +1,7 @@
 import {Link} from "react-router-dom";
 import React from "react";
 
-const NavBar=  ({items})=>{
+const NavBar=  ()=>{
     return(
         <nav className="navbar">
             <ul>

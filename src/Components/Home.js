@@ -49,11 +49,9 @@ function HomePage(){
 
 
     return(
-        <div>
+        <div className="main-homepage">
             <h1> This is the homepage </h1>
-
             <Students items={uniqueStudents}/>
-
             <Barchart
                 items={uniqueAssignments}/>
             <br/>
@@ -62,7 +60,6 @@ function HomePage(){
             <br/>
             <br/>
             <br/>
-
 
             <Table items={items}
                    sortAZ={sortAZ}
