@@ -1,23 +1,13 @@
 import React from "react"
-import {useParams} from "react-router-dom";
-import Barchart from "./Barchart";
-
-function StudentProfile({items}){
-    const {id}= useParams();
-    const student = items.find((item) => item.id ===parseInt(id));
 
 
-    const {name, difficulty, fun, assignment} = student;
+function StudentProfile ({name, assignment, difficulty, fun, id}) {
 
     return(
         <div>
-            <h1>{name}</h1>
-            <Barchart items={[{assignment, difficulty,fun}]}/>
+            {name || ""}
         </div>
     )
 }
-
-
-
 
 export default StudentProfile

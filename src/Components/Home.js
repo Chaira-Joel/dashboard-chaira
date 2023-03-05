@@ -63,12 +63,12 @@ function HomePage(){
                    sortAZ={sortAZ}
                     sortRating={sortRating}/>
 
-            <Routes>
-                <Route
-                    path="/students/:id"
-                    element={<StudentProfile items={transformedStudentData} />}
-                />
-            </Routes>
+            {/*<Routes>*/}
+            {/*    <Route*/}
+            {/*        path="/students/:id"*/}
+            {/*        element={<StudentProfile items={transformedStudentData} />}*/}
+            {/*    />*/}
+            {/*</Routes>*/}
 
         </div>
 

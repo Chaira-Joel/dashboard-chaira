@@ -7,23 +7,15 @@ import Students from "./Components/Students";
 import StudentProfile from "./Components/StudentProfile";
 import studentDataArray from "./StudentData/Data";
 
-const transformedStudentData = studentDataArray.map((item, index)=>{
-    return {
-        id: index+1,
-        name: item.name,
-        assignment: item.assignment,
-        difficulty: parseInt(item.difficulty),
-        fun: parseInt(item.fun)
-    };
-});
+
 function App() {
   return (
     <div className="App">
 
-<Routes>
-    <Route path="/" element={<Students />}/>
-    <Route path="/students/:id" element={<StudentProfile items={transformedStudentData} />} />
-</Routes>
+{/*<Routes>*/}
+{/*    <Route path="/" element={<Students />}/>*/}
+{/*    <Route path="/students/:id" element={<StudentProfile />} />*/}
+{/*</Routes>*/}
       <Header/>
         <Home/>
       <Footer/>
