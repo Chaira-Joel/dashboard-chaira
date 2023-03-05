@@ -7,14 +7,14 @@ function Barchart({items}){
     const [showFun, setShowFun] = useState(true); //state variable for fun filter
     const [showDifficulty, setShowDifficulty] = useState(true);// state variable for difficulty filter
 
-    const dataDifficulty = items.map ((item) => ({
+    const dataDifficulty = items?.map ((item) => ({
         assignment: item.assignment,
         difficulty: item.difficulty,
-    }))
-    const dataFun = items.map ((item) => ({
+    }));
+    const dataFun = items?.map ((item) => ({
         assignment: item.assignment,
         fun: item.fun
-    }))
+    }));
 
     return(
         <div data-testid="barchart">

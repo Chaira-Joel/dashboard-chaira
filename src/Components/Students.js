@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 function Students({ items }) {
     const ListStudents = items
         ? items.map((item) => (
-            <div key={item.id}>
+            <div className="studentlinks" key={item.id}>
+
                 <Link to={`/${item.name}`}>
-                    <h2>{item.name}</h2>
+                    <h5>{item.name}</h5>
                 </Link>
+
 
             </div>
         ))

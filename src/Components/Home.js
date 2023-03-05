@@ -5,7 +5,6 @@ import Table from "./Table";
 import Students from "./Students";
 import studentDataArray from "../StudentData/Data";
 
-
 const transformedStudentData = studentDataArray.map((item, index)=>{
     return {
         id: index+1,

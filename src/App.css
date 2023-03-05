@@ -2,37 +2,48 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.table{
+  background-color: lightgreen;
+  margin:auto;
+  border: 1px solid black;
+  border-radius:5px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.footer{
+  background-color:red;
+  height: 80px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navbar{
+  background-color: indianred;
+ margin: auto;
+
+}
+
+ul{
+  list-style:none;
+  padding:15px;
+}
+
+ul li{
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+
+
+
+}
+a{
+  padding-left:10px;
+}
+.studentprofile{
+  background-color: lightgoldenrodyellow ;
 }
 
-.App-link {
-  color: #61dafb;
+.header{
+  background-color: cyan ;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.studentlinks{
+  display: flex;
+  justify-content: center;
 }
