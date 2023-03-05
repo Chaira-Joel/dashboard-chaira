@@ -56,6 +56,12 @@ function HomePage(){
 
             <Barchart
                 items={uniqueAssignments}/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
+            <br/>
 
 
             <Table items={items}

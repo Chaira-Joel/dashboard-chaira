@@ -1,49 +1,49 @@
-.App {
-  text-align: center;
-}
+/*.App {*/
+/*  text-align: center;*/
+/*}*/
 
-.table{
-  background-color: lightgreen;
-  margin:auto;
-  border: 1px solid black;
-  border-radius:5px;
-}
+/*.table{*/
+/*  background-color: lightgreen;*/
+/*  margin:auto;*/
+/*  border: 1px solid black;*/
+/*  border-radius:5px;*/
+/*}*/
 
-.footer{
-  background-color:red;
-  height: 80px;
-}
+/*.footer{*/
+/*  background-color:red;*/
+/*  height: 80px;*/
+/*}*/
 
-.navbar{
-  background-color: indianred;
- margin: auto;
+/*.navbar{*/
+/*  background-color: indianred;*/
+/* margin: auto;*/
 
-}
+/*}*/
 
-ul{
-  list-style:none;
-  padding:15px;
-}
+/*ul{*/
+/*  list-style:none;*/
+/*  padding:15px;*/
+/*}*/
 
-ul li{
-  display: flex;
-  justify-content: center;
+/*ul li{*/
+/*  display: flex;*/
+/*  justify-content: center;*/
 
 
 
-}
-a{
-  padding-left:10px;
-}
-.studentprofile{
-  background-color: lightgoldenrodyellow ;
-}
+/*}*/
+/*a{*/
+/*  padding-left:10px;*/
+/*}*/
+/*.studentprofile{*/
+/*  background-color: lightgoldenrodyellow ;*/
+/*}*/
 
-.header{
-  background-color: cyan ;
-}
+/*.header{*/
+/*  background-color: cyan ;*/
+/*}*/
 
-.studentlinks{
-  display: flex;
-  justify-content: center;
-}
+/*.studentlinks{*/
+/*  display: flex;*/
+/*  justify-content: center;*/
+/*}*/

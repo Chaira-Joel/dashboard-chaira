@@ -38,8 +38,8 @@ function Barchart({items}){
     height={300}
     domainPadding={{ x: [20, 20], y: [0, 10] }}
     theme={VictoryTheme.material}
-    width={800}
-    height={200}>
+    width={900}
+    height={300}>
 
     <VictoryAxis
         label="assignment"
@@ -49,11 +49,12 @@ function Barchart({items}){
             axisLabel: { padding: 30 },
             Label:{fontSize: 6},
             tickLabels:{
-                fontSize:2,
-                angle:-90,
+                fontSize:5,
+                angle:-70,
                 verticalAnchor: 'middle',
                 fontsize:7,
-                padding:15
+                padding:20
+
             }}}
     />
 
