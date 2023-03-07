@@ -1,0 +1,12 @@
+.main-homepage{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:20px;
+    font-size:20px;
+}
+
+.main-homepage h1{
+    text-align: center;
+    margin-bottom: 20px;
+}

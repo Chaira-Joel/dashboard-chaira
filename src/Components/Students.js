@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import './Students.css'
 
 //this component renders a link for every student. the result would be localhost/studentname
 function Students({ items }) {
@@ -14,7 +15,7 @@ function Students({ items }) {
         : null;
 
     return (
-        <div>
+        <div className="student-links-container">
             {ListStudents}
         </div>
     );

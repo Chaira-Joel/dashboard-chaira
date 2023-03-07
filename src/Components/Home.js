@@ -4,6 +4,7 @@ import Barchart from "./Barchart";
 import Table from "./Table";
 import Students from "./Students";
 import studentDataArray from "../StudentData/Data";
+import './Home.css'
 
 const transformedStudentData = studentDataArray.map((item, index)=>{
     return {
@@ -50,7 +51,7 @@ function HomePage(){
 
     return(
         <div className="main-homepage" data-testid="main-homepage" >
-            <h1> This is the homepage </h1>
+            <h1> Click on a student name</h1>
             <Students items={uniqueStudents}/>
             <Barchart
                 items={uniqueAssignments}/>

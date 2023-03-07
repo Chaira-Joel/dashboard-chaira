@@ -1,5 +1,6 @@
 import React from "react"
 import TableItem from "./TableItem";
+import './Table.css'
 
 function Table({items,sortAZ,sortRating}){
 
