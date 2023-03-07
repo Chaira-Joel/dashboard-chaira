@@ -19,13 +19,16 @@
 }
 
 .table-head-row button{
-    background:none;
+    background-color: #ccc;
     border: 1px solid black;
     border-radius:2px;
     cursor:pointer;
     margin-left:10px;
     font-size:12px;
     color: #333;
+    width:70px;
+    height:25px;
+    border-radius: 3px;
 }
 .table-head-row button:hover {
     color: #666;
