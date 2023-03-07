@@ -3,12 +3,28 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    background-color: #333;
+    border-radius: 5px;
+    padding: 10px;
+    margin:10px;
 }
 .student-links {
     margin: 0 10px;
+    display: flex;
+    align-items: center;
 }
 
 
 .student-links h5 {
-    margin-right: 10px; /* add some space between the student names */
+    margin: 0;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
 }
+
+.student-links h5:hover {
+    opacity: 0.7;
+    cursor: pointer;
+    text-decoration: underline;
+}
+

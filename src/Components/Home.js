@@ -51,7 +51,6 @@ function HomePage(){
 
     return(
         <div className="main-homepage" data-testid="main-homepage" >
-            <h1> Click on a student name</h1>
             <Students items={uniqueStudents}/>
             <Barchart
                 items={uniqueAssignments}/>
