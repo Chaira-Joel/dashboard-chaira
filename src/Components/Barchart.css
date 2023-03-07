@@ -1,69 +1,10 @@
-/* Style the entire chart */
-.victory-container {
-    font-family: Arial, sans-serif;
-}
-
-/* Style the x-axis labels */
-.victory-axis-tick-label {
-    font-size: 10px;
-    font-weight: bold;
-    fill: #333;
-}
-
-/* Style the y-axis labels */
-.victory-axis-label {
+.checkbox label {
+    display: inline-block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 12px;
+    cursor: pointer;
     font-size: 14px;
-    font-weight: bold;
-    fill: #333;
-}
-
-/* Style the grid lines */
-.victory-grid-line {
-    stroke: #ccc;
-    stroke-width: 1px;
-}
-
-/* Style the bars */
-.victory-bar {
-    stroke: #fff;
-    stroke-width: 1px;
-}
-
-/* Style the fun bars */
-.victory-bar.fun {
-    fill: #ffc107;
-}
-
-/* Style the difficulty bars */
-.victory-bar.difficulty {
-    fill: #dc3545;
-}
-
-/* Style the legend */
-.barchart-legend {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    margin-top: 10px;
-}
-
-/* Style the legend items */
-.barchart-legend-item {
-    display: flex;
-    align-items: center;
-    margin: 5px;
-}
-
-/* Style the legend color boxes */
-.barchart-legend-color {
-    width: 12px;
-    height: 12px;
-    margin-right: 5px;
-}
-
-/* Style the legend labels */
-.barchart-legend-label {
-    font-size: 12px;
-    color: #333;
+    font-weight: 300;
+    color: #555;
 }

@@ -17,8 +17,8 @@ const transformedStudentData = studentDataArray.map((item, index)=>{
 })
 
 function HomePage(){
-
     const [items, setItems] = useState(transformedStudentData);
+
 
     const sortAZ= (key) => {
         const newStudentList = [...items]
@@ -52,6 +52,9 @@ function HomePage(){
     return(
         <div className="main-homepage" data-testid="main-homepage" >
             <Students items={uniqueStudents}/>
+            <br/>
+            <br/>
+            <br/>
             <Barchart
                 items={uniqueAssignments}/>
             <br/>

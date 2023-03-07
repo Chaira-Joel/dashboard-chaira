@@ -20,13 +20,16 @@ function Table({items,sortAZ,sortRating}){
             <table className="table" data-testid="table" >
                 <thead className="table-head" data-testid="table-head" >
                 <th className="table-head-row">Name
-                    <button onClick={ ()=> {sortAZ('name')}}>Sort by name</button>
+                    <button onClick={ ()=> {sortAZ('name')}}>Sort</button>
                 </th>
                 <th className="table-head-row">Sort by assignment
                     <button onClick={()=>{sortAZ('assignment')}}>Sort</button>
                 </th>
                 <th className="table-head-row">Sort by difficulty
                     <button onClick={()=>{sortRating('difficulty')}}>Sort</button>
+                </th>
+                <th className="table-head-row">Sort by fun
+                    <button onClick={()=>{sortRating('fun')}}>Sort</button>
                 </th>
                 </thead>
                 <tbody className="table-body">{ListItems}</tbody>

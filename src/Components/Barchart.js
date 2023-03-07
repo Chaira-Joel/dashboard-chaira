@@ -1,6 +1,7 @@
 import React from "react"
 import {useState} from "react";
-import {VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryGroup} from "victory";
+import {VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryGroup, VictoryContainer} from "victory";
+import './Barchart.css'
 
 function Barchart({items}){
 
@@ -17,13 +18,15 @@ function Barchart({items}){
     }));
 
     return(
-        <div className="barchart" data-testid="barchart">
+        <div className="checkbox">
+
             <label>
                 <input
                     type="checkbox"
                     checked={showFun}
                     onChange={(e)=> setShowFun(e.target.checked)}
                     />
+
                 Show fun ratings
             </label>
                 <label>
@@ -33,28 +36,27 @@ function Barchart({items}){
                            />
                     Show difficulty ratings
                 </label>
+
+    <div className="barchart" data-testid="barchart">
 <VictoryChart
+    containerComponent={<VictoryContainer height={400}/>}
     width={900}
-    height={300}
+    height={350}
     domainPadding={{ x: [20, 20], y: [0, 10] }}
     theme={VictoryTheme.material}
-    width={900}
-    height={300}>
+   >
+
 
     <VictoryAxis
         label="assignment"
         tickValues={[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51,52,53,54]}
         tickFormat={(value, index) => items && items[index] ? items[index].assignment.toString() : ""}
         style={{
-            axisLabel: { padding: 30 },
-            Label:{fontSize: 6},
+            axisLabel: { padding: 4, fontSize: 9 },
             tickLabels:{
                 fontSize:5,
-                angle:-70,
-                verticalAnchor: 'middle',
-                fontsize:7,
-                padding:20
-
+                angle:-90,
+                padding:42
             }}}
     />
 
@@ -63,10 +65,9 @@ function Barchart({items}){
         dependentAxis
         tickFormat={x => `${x}`}
         style={{
-            axisLabel: { padding:25 },
-            Label:{fontSize: 6},
+            axisLabel: { padding:25, fontSize: 9 },
             tickLabels:{
-                fontSize:4
+                fontSize:5
             }}
         }/>
 
@@ -76,13 +77,13 @@ function Barchart({items}){
 
         {showDifficulty &&
             <VictoryBar
-                barWidth={2}
-                style={{ data: { fill: "tomato", width: 6 } }}
+                barWidth={3}
+                style={{ data: { fill: "tomato" } }}
                 data={dataDifficulty}
                 x={"assignment"}
                 y={"difficulty"}
                 animate={{
-                    duration:2000,
+                    duration:1500,
                     onLoad: {duration:1000},
                 }}
 
@@ -91,19 +92,20 @@ function Barchart({items}){
         {showFun &&
 
             <VictoryBar
-             barWidth={2}
-             style={{ data: { fill: "gold" } }}
+             barWidth={3}
+             style={{ data: { fill: "gold", width: 8 } }}
                data={dataFun}
              x={"assignment"}
              y={"fun"}
              animate={{
                  duration:1500,
-                 onLoad: {duration:500},
+                 onLoad: {duration:1000},
              }}
     />
         }
     </VictoryGroup>
 </VictoryChart>
+        </div>
         </div>
     )
 }
