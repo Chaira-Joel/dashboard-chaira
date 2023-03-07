@@ -34,7 +34,7 @@ function Barchart({items}){
                     Show difficulty ratings
                 </label>
 <VictoryChart
-    width={500}
+    width={900}
     height={300}
     domainPadding={{ x: [20, 20], y: [0, 10] }}
     theme={VictoryTheme.material}
@@ -77,7 +77,7 @@ function Barchart({items}){
         {showDifficulty &&
             <VictoryBar
                 barWidth={2}
-                style={{ data: { fill: "tomato" } }}
+                style={{ data: { fill: "tomato", width: 6 } }}
                 data={dataDifficulty}
                 x={"assignment"}
                 y={"difficulty"}
