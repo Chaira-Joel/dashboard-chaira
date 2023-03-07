@@ -24,6 +24,10 @@
     font-size: 1.5rem;
 }
 
-.footer-icons a:hover {
+.footer-icons a:hover,
+a:hover{
     color: #c4c4c4;
+}
+a{
+    color:white;
 }
