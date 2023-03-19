@@ -40,7 +40,7 @@ function HomePage(){
         return result;
     }, []);
 
-    const uniqueAssignments = transformedStudentData.reduce((result, current)=>{
+     const uniqueAssignments = transformedStudentData.reduce((result, current)=>{
         if(result.some(item=> item.assignment === current.assignment)){
             return result;
         }
