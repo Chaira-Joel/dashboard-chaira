@@ -48,29 +48,18 @@ function HomePage(){
         return result;
     }, []);
 
-
     return(
         <div className="main-homepage" data-testid="main-homepage" >
             <Students items={uniqueStudents}/>
             <br/>
-            <br/>
-            <br/>
+
             <Barchart
                 items={uniqueAssignments}/>
             <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-
             <Table items={items}
                    sortAZ={sortAZ}
-                    sortRating={sortRating}/>
-
+                   sortRating={sortRating}/>
         </div>
-
-
     )
 }
 

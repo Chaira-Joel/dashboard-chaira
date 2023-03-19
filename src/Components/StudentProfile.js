@@ -21,7 +21,18 @@ function StudentProfile() {
     if (!studentData) {
         return <div>Loading...</div>;
     }
-    const assignments = studentDataArray.filter(item => item.name.toLowerCase() === name.toLowerCase());
+    const assignments = studentDataArray
+        .filter(item => item.name.toLowerCase() === name.toLowerCase())
+        .map((item, index)=>{
+        return {
+            id: index+1,
+            name: item.name,
+            assignment: item.assignment,
+            difficulty: parseInt(item.difficulty),
+            fun: parseInt(item.fun)
+        };
+        })
+
     return (
         <div className ="student-profile" data-testid="student-profile" >
             <h4> This is the page of {studentData.name}</h4>

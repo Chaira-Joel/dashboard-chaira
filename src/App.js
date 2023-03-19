@@ -6,7 +6,7 @@ import NavBar from "./Components/NavBar";
 import About   from "./Components/About"
 import Footer from "./Components/Footer";
 import Header  from "./Components/Header"
-import Contact from './Components/Contact'
+
 
 
 function App() {
@@ -18,7 +18,6 @@ function App() {
             <Route path="/home" element={<Home/>}/>
             <Route path="/about" element={<About/>}/>
             <Route path="/:name" element={<StudentProfile/> }/>
-            <Route path="/:contact" element={<Contact/> }/>
         </Routes>
         <Footer/>
     </div>
