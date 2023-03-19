@@ -37,3 +37,5 @@ Acceptance criteria
 
 Checkbox is visible
 When clicking the checkbox, data is filtered based on the checkbox value
+
+![image](https://user-images.githubusercontent.com/79043671/226177437-c123119f-8726-450d-a7fd-2e13560336d2.png)
