@@ -4,7 +4,7 @@ import Barchart from "./Barchart";
 import Table from "./Table";
 import Students from "./Students";
 import studentDataArray from "../StudentData/Data";
-import './Home.css'
+import '../Styles/Home.css'
 
 const transformedStudentData = studentDataArray.map((item, index)=>{
     return {

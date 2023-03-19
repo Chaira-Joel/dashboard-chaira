@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import studentDataArray from "../StudentData/Data";
 import Barchart from "./Barchart";
-import './Studentprofile.css'
+import '../Styles/Studentprofile.css'
 
 
 function StudentProfile() {

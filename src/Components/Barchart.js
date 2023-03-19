@@ -1,7 +1,7 @@
 import React from "react"
 import {useState} from "react";
 import {VictoryBar, VictoryChart, VictoryAxis, VictoryTheme, VictoryGroup, VictoryContainer} from "victory";
-import './Barchart.css'
+import '../Styles/Barchart.css'
 
 function Barchart({items}){
 
@@ -20,7 +20,7 @@ function Barchart({items}){
     return(
         <div className="checkbox">
 
-            <label>
+            <label className="switch">
                 <input
                     type="checkbox"
                     checked={showFun}
@@ -29,11 +29,13 @@ function Barchart({items}){
 
                 Show fun ratings
             </label>
-                <label>
+                <label className="switch">
                     <input type="checkbox"
+
                            checked={showDifficulty}
                            onChange={(e)=> setShowDifficulty(e.target.checked)}
                            />
+
                     Show difficulty ratings
                 </label>
 
